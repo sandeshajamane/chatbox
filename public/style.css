@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; background-color: #f4f4f9; }
+.chat { max-width: 600px; margin: 50px auto; padding: 20px; background: white; border: 1px solid #ddd; }
+.messages { max-height: 300px; overflow-y: auto; margin-bottom: 20px; }
+.message { margin: 5px 0; }
+form { display: flex; gap: 10px; }
+input, button { flex: 1; padding: 10px; }

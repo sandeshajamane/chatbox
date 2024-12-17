@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .chat { max-width: 500px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; }
+        .messages { margin-bottom: 20px; }
+        .message { margin: 5px 0; }
+        form { display: flex; gap: 10px; }
+        input, button { padding: 10px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="chat">
+        <div class="messages">
+            <% messages.forEach((msg) => { %>
+                <div class="message"><%= msg %></div>
+            <% }) %>
+        </div>
+        <form action="/send" method="POST">
+            <input type="text" name="sender" placeholder="Your name" required>
+            <input type="text" name="message" placeholder="Type a message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
